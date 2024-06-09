@@ -47,7 +47,7 @@ $(NAME): $(PUSH_SWAP_OBJS)
  ##########################                        ###########################
 ###############################################################################
 
-$(CHECKER_OBJS): $(CHECKER_HEADER)
+$(CHECKER_OBJS): $(CHECKER_HEADER) $(PUSH_SWAP_HEADER)
 
 $(B_NAME): $(CHECKER_OBJS)
 		$(CC) $(CFLAGS) $(HEADERS) $(CHECKER_OBJS) -o $(B_NAME)
