@@ -6,7 +6,7 @@
 /*   By: aattak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 16:14:13 by aattak            #+#    #+#             */
-/*   Updated: 2024/06/10 17:35:47 by aattak           ###   ########.fr       */
+/*   Updated: 2024/06/11 18:26:03 by aattak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	swap_stack(t_stack **stack)
 
 	if (*stack)
 	{
-		if (*stack->next)
+		if ((*stack)->next)
 		{
 			tmp_1 = pop_stack(stack);
 			tmp_2 = pop_stack(stack);

@@ -6,7 +6,7 @@
 /*   By: aattak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 16:13:23 by aattak            #+#    #+#             */
-/*   Updated: 2024/06/10 19:51:44 by aattak           ###   ########.fr       */
+/*   Updated: 2024/06/11 18:25:40 by aattak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_stack	*pop_stack(t_stack **stack)
 	if (*stack)
 	{
 		first_node = *stack;
-		*stack = *stack->next;
+		*stack = (*stack)->next;
 		first_node->next = NULL;
 		return (first_node);
 	}
@@ -34,10 +34,10 @@ t_stack	*reverse_pop_stack(t_stack **stack)
 	new_last_node = *stack;
 	if (*stack)
 	{
-		if (*stack->next)
+		if ((*stack)->next)
 		{
 			while (new_last_node->next->next)
-				new_last_node = newlast_node->next;
+				new_last_node = new_last_node->next;
 			last_node = new_last_node->next;
 			new_last_node->next = NULL;
 			return (last_node);
