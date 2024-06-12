@@ -30,7 +30,7 @@ PUSH_SWAP_SRCS		=	srcs/push_swap.c srcs/input_output/ft_split.c \
 
 PUSH_SWAP_OBJS		=	$(PUSH_SWAP_SRCS:.c=.o)
 
-CHECKER_SRCS		=	checker/*.c checker/*/*.c
+CHECKER_SRCS		=	checker_srcs/checker_bonus.c
 
 CHECKER_OBJS		=	$(CHECKER_SRCS:.c=.o)
 
@@ -45,7 +45,9 @@ all: $(NAME)
 $(PUSH_SWAP_OBJS): $(PUSH_SWAP_HEADER)
 
 $(NAME): $(PUSH_SWAP_OBJS)
+		@echo "\033[1;32m\nBuilding push_swap ...\033[0m"
 		$(CC) $(CFLAGS) $(HEADERS) $(PUSH_SWAP_OBJS) -o $(NAME)
+		@echo "\033[1;32m\npush_swap built successfully\n\033[0m"
 
 ###############################################################################
  ##########################                        ###########################
@@ -56,7 +58,9 @@ $(NAME): $(PUSH_SWAP_OBJS)
 $(CHECKER_OBJS): $(CHECKER_HEADER) $(PUSH_SWAP_HEADER)
 
 $(B_NAME): $(CHECKER_OBJS)
+		@echo "\033[1;32m\nBuilding checker ...\033[0m"
 		$(CC) $(CFLAGS) $(HEADERS) $(CHECKER_OBJS) -o $(B_NAME)
+		@echo "\033[1;32m\nchecker built successfully\n\033[0m"
 
 bonus: $(B_NAME)
 
@@ -84,7 +88,7 @@ fclean: clean
 		@echo "\033[1;32mCleaning executables ...\033[0m"
 		@echo "\033[1;31m\nRemove push_swap ...\033[0m"
 		$(RM) $(NAME)
-		@echo "\033[1;31m\nRemove checker ...\033[0m"
+		@echo "\033[1;31m\nRemove checker_bonus ...\033[0m"
 		$(RM) $(B_NAME)
 		@echo "\033[1;32m\nFull Cleaning terminated successfully\n\033[0m"
 
