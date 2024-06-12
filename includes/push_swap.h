@@ -27,7 +27,7 @@ typedef struct	s_stack
 // Input-Output Functions
 t_stack	*create_stack(int ac, char **av);
 char	**ft_split(char const *s, size_t *n_words);
-void	free_split(char **split, size_t i);
+void	free_split(char **split, size_t n_words);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 void	ft_putstr_fd(char *str, int fd);
 

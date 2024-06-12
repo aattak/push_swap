@@ -59,17 +59,15 @@ static char	*malloc_nd_fill(char const *s, size_t *i)
 	return (split);
 }
 
-void	free_split(char **split, size_t i)
+void	free_split(char **split, size_t n_words)
 {
-	if (i)
+	if (n_words)
 	{
-		i--;
-		while (i >= 0)
+		while (n_words--)
 		{
-			free(split[i]);
-			if (i == 0)
+			free(split[n_words]);
+			if (n_words == 0)
 				break ;
-			i--;
 		}
 	}
 	if (split)
