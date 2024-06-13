@@ -6,20 +6,11 @@
 /*   By: aattak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 20:16:45 by aattak            #+#    #+#             */
-/*   Updated: 2024/06/10 20:38:39 by aattak           ###   ########.fr       */
+/*   Updated: 2024/06/13 17:07:06 by aattak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
-
-t_stack	*ft_lstlast(t_stack *list)
-{
-	if (!list)
-		return (NULL);
-	while (list->next)
-		list = list->next;
-	return (list);
-}
 
 void	ft_lstadd_front(t_stack **list, t_stack *new_node)
 {

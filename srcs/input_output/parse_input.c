@@ -6,7 +6,7 @@
 /*   By: aattak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 07:57:40 by aattak            #+#    #+#             */
-/*   Updated: 2024/06/11 21:04:53 by aattak           ###   ########.fr       */
+/*   Updated: 2024/06/13 12:13:12 by aattak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,21 @@ void	split_to_stack(t_stack **stack, char **split, size_t n_words)
 		ft_lstadd_back(stack, node);
 		i++;
 	}
+}
+
+int	is_stack_sorted(t_stack *stack_a, t_stack *stack_b)
+{
+	if (!stack_b)
+	{
+		while (stack_a->next)
+		{
+			if (stack_a->data > stack_a->next->data)
+				return (0);
+			stack_a = stack_a->next;
+		}
+		return (1);
+	}
+	return (0);
 }
 
 t_stack	*create_stack(int ac, char **av)
