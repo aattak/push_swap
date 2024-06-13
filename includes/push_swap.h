@@ -6,7 +6,7 @@
 /*   By: aattak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 16:55:31 by aattak            #+#    #+#             */
-/*   Updated: 2024/06/11 20:44:55 by aattak           ###   ########.fr       */
+/*   Updated: 2024/06/13 17:18:33 by aattak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct	s_stack
 
 // Input-Output Functions
 t_stack	*create_stack(int ac, char **av);
+int		is_stack_sorted(t_stack *stack_a, t_stack *stack_b);
 char	**ft_split(char const *s, size_t *n_words);
 void	free_split(char **split, size_t n_words);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
@@ -37,6 +38,7 @@ void	ft_lstadd_back(t_stack **list, t_stack *new_node);
 t_stack	*ft_lstnew(int data);
 void	ft_lstclear(t_stack *list);
 t_stack	*ft_lstlast(t_stack *list);
+int		ft_lstsize(t_stack *list);
 
 // Stack Operations		// to use when implementing the checker
 t_stack	*pop_stack(t_stack **stack);
