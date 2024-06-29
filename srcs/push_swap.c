@@ -6,7 +6,7 @@
 /*   By: aattak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 17:48:40 by aattak            #+#    #+#             */
-/*   Updated: 2024/06/13 12:13:15 by aattak           ###   ########.fr       */
+/*   Updated: 2024/06/19 13:13:56 by aattak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,8 @@ int	main(int ac, char **av)
 	if (ac > 1)
 	{
 		stack_a = create_stack(ac, av);
-		if (is_stack_sorted(stack_a, stack_b))
-		{
-			ft_lstclear(stack_a);
-			return (0);
-		}
-		//sort_stack(stack_a, stack_b);
+		if (!is_stack_sorted(stack_a, NULL))
+			sort_stack(&stack_a, &stack_b);
 		ft_lstclear(stack_a);
 	}
 	return (0);
