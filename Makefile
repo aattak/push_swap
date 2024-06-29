@@ -28,7 +28,7 @@ PUSH_SWAP_MAIN_SRC	=	srcs/push_swap.c
 
 PUSH_SWAP_MAIN_OBJ	=	$(PUSH_SWAP_MAIN_SRC:.c=.o)
 
-PUSH_SWAP_SRCS		=	srcs/input_output/ft_split.c \
+PUSH_SWAP_SRCS		=	srcs/input_output/ft_split.c srcs/stack_sort_algorithm/sort_stack.c \
 						srcs/input_output/parse_input.c srcs/linked_lists_operations/list_add.c \
 						srcs/stack_operations/pop_and_push.c srcs/stack_operations/swap_and_rotate.c \
 						srcs/stack_sort_instructions/push.c srcs/stack_sort_instructions/rotate.c \

@@ -6,7 +6,7 @@
 /*   By: aattak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 16:55:31 by aattak            #+#    #+#             */
-/*   Updated: 2024/06/13 17:18:33 by aattak           ###   ########.fr       */
+/*   Updated: 2024/06/19 13:22:05 by aattak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,14 @@ typedef struct	s_stack
 
 // Input-Output Functions
 t_stack	*create_stack(int ac, char **av);
+int	ft_isduplicate(t_stack *stack, int nbr);
 int		is_stack_sorted(t_stack *stack_a, t_stack *stack_b);
 char	**ft_split(char const *s, size_t *n_words);
+long	ft_atoil(const char *str);
 void	free_split(char **split, size_t n_words);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 void	ft_putstr_fd(char *str, int fd);
+void	error_handler(t_stack *stack, char **split, size_t n_words, char *str);
 
 // Linked Lists Operations
 void	ft_lstadd_front(t_stack **list, t_stack *new_node);
@@ -60,5 +63,7 @@ void	rotate_stacks_a_and_b(t_stack **stack_a, t_stack **stack_b);
 void	reverse_rotate_stack_a(t_stack **stack_a);
 void	reverse_rotate_stack_b(t_stack **stack_b);
 void	reverse_rotate_stacks_a_and_b(t_stack **stack_a, t_stack **stack_b);
+
+void	sort_stack(t_stack **stack_a, t_stack **stack_b);
 
 #endif
