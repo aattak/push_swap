@@ -35,7 +35,8 @@ PUSH_SWAP_SRCS		=	srcs/input_output/ft_split.c srcs/stack_sort_algorithm/sort_st
 						srcs/stack_sort_instructions/reverse_rotate.c srcs/stack_sort_instructions/swap.c \
 						srcs/input_output/string_manip.c srcs/input_output/utils.c \
 						srcs/linked_lists_operations/list_clear.c srcs/linked_lists_operations/list_create.c \
-						srcs/linked_lists_operations/list_utils.c
+						srcs/linked_lists_operations/list_utils.c srcs/stack_sort_algorithm/apply_indexes.c \
+						srcs/stack_sort_algorithm/utils.c
 
 PUSH_SWAP_OBJS		=	$(PUSH_SWAP_SRCS:.c=.o)
 
